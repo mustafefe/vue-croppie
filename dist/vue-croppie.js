@@ -195,12 +195,7 @@
 	                    resolve(img);
 	                }, 1);
 	            }
-
-	            img.removeAttribute('crossOrigin');
-	            if (src.match(/^https?:\/\/|^\/\//)) {
-	                img.setAttribute('crossOrigin', 'anonymous');
-	            }
-
+			
 	            img.onload = function () {
 	                if (doExif) {
 	                    EXIF.getData(img, function () {
